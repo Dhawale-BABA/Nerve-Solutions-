@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Strategies Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trading Strategies</h1>
+            <p class="subtitle">Select your market outlook and date to view recommended strategies</p>
+        </header>
+
+        <!-- Toggle Switch -->
+        <div class="toggle-container">
+            <button class="toggle-btn active" data-view="Bullish">
+                <i class="fas fa-chart-line"></i> Bullish
+            </button>
+            <button class="toggle-btn" data-view="Bearish">
+                <i class="fas fa-chart-line fa-flip-vertical"></i> Bearish
+            </button>
+            <button class="toggle-btn" data-view="RangeBound">
+                <i class="fas fa-grip-lines-vertical"></i> Rangebound
+            </button>
+            <button class="toggle-btn" data-view="Volatile">
+                <i class="fas fa-bolt"></i> Volatile
+            </button>
+        </div>
+
+        <!-- Date Selection -->
+        <div class="date-selection">
+            <label for="dateDropdown">Select Expiry Date:</label>
+            <select id="dateDropdown"></select>
+        </div>
+
+        <!-- Strategy Cards Container -->
+        <div class="strategy-section">
+            <h2 id="strategyTitle">Bullish Strategies</h2>
+            <div id="strategyContainer"></div>
+        </div>
+
+        <footer>
+            <p>Trading involves risk. Always conduct your own research before executing trades.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
